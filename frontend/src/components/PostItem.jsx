@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { CalendarDaysIcon } from "@heroicons/react/24/solid";
 
 const PostItem = ({ post }) => {
   const { id, title, description, date, image } = post;
@@ -12,7 +13,10 @@ const PostItem = ({ post }) => {
         <Link>
           <p className="title">{title}</p>
         </Link>
-        <p className="date">Post Date - {date}</p>
+        <p className="date">
+          <CalendarDaysIcon className="clock-icon" />
+          Post Date - {date}
+        </p>
         <p>{description}</p>
         <hr />
       </section>
