@@ -1,0 +1,57 @@
+:root {
+  --primary-color: #f9d949;
+}
+.main {
+  width: 60%;
+  margin: auto;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #000;
+}
+nav div a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #000;
+}
+nav div a.active {
+  color: #fff;
+  background-color: #000;
+  padding: 8px;
+}
+.post {
+  width: 60%;
+  margin: auto;
+}
+.post img {
+  width: 100%;
+  object-fit: contain;
+  height: 200px;
+}
+.date {
+  color: #999;
+}
+.title {
+  font-size: 20px;
+  font-weight: 800;
+}
+.details {
+  width: 80%;
+  margin: auto;
+}
+.details img {
+  width: 100%;
+}
+.description {
+  color: #000;
+}
+.detail-title {
+  font-size: 30px;
+  font-weight: 700;
+}
