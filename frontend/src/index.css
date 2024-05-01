@@ -128,3 +128,19 @@ textarea {
   width: 20rem;
   height: 20rem;
 }
+.create-acc {
+  font-size: 18px;
+  font-weight: normal;
+  margin: 20px;
+}
+.create-acc a {
+  text-decoration: underline;
+  font-weight: 600;
+  cursor: pointer;
+}
+button {
+  cursor: pointer;
+}
+.login-btn {
+  margin-top: 20px;
+}

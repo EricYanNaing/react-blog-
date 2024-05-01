@@ -10,6 +10,7 @@ import Details, {
 } from "./pages/Details";
 import Error from "./components/Error";
 import Edit from "./pages/Edit";
+import Auth from "./pages/Auth";
 
 function App() {
   const router = createBrowserRouter([
@@ -27,6 +28,10 @@ function App() {
           path: "create-post",
           element: <Create />,
           action: createAction,
+        },
+        {
+          path: "/auth",
+          element: <Auth />,
         },
         {
           path: ":id",
