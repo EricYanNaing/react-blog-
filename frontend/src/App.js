@@ -1,7 +1,9 @@
 import Main from "./layout/Main";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Posts, { loader as postsLoader } from "./pages/Posts";
-import Create, { action as createAction } from "./pages/Create";
+import { action as createAction } from "./components/PostForm";
+import { action as udpateAction } from "./components/PostForm";
+import Create from "./pages/Create";
 import Details, {
   action as deleteAction,
   loader as detailsLoader,
@@ -39,6 +41,7 @@ function App() {
             {
               path: "edit-post",
               element: <Edit />,
+              action: udpateAction,
             },
           ],
         },

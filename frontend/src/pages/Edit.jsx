@@ -10,6 +10,7 @@ const Edit = () => {
         oldPostData={post}
         header={"Edit Your Post Now"}
         btn={"Update Post"}
+        method={"patch"}
       />
     </>
   );

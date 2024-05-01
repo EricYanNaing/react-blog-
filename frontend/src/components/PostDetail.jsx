@@ -3,7 +3,7 @@ import React from "react";
 import { Link, useSubmit } from "react-router-dom";
 
 const PostDetail = ({ post }) => {
-  const { description, date, image, title, id } = post;
+  const { description, date, image, title } = post;
   const submit = useSubmit();
 
   const deleteHandler = () => {

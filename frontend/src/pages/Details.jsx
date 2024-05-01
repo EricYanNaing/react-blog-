@@ -1,5 +1,5 @@
 import React from "react";
-import { redirect, useLoaderData, useRouteLoaderData } from "react-router-dom";
+import { redirect, useRouteLoaderData } from "react-router-dom";
 import PostDetail from "../components/PostDetail";
 
 const Details = () => {
