@@ -111,3 +111,20 @@ textarea {
   align-items: center;
   justify-content: end;
 }
+.er-btn {
+  width: max-content;
+  padding: 10px;
+  cursor: pointer;
+  margin: 0 auto;
+  color: #fff !important;
+}
+.errorSection,
+.errorSection p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.errorSection div .icon {
+  width: 20rem;
+  height: 20rem;
+}
