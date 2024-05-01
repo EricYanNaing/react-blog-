@@ -8,14 +8,14 @@ const AuthForm = () => {
   return (
     <section className="form-section">
       <p>{isLogin ? "Login to your account" : "Create new account"}</p>
-      <Form>
+      <Form method="post">
         <div>
           <label htmlFor="email">Email</label>
-          <input type="email" name="email" id="email" />
+          <input type="email" name="email" id="email" required />
         </div>
         <div>
           <label htmlFor="password">Password</label>
-          <input type="password" name="password" id="password" />
+          <input type="password" name="password" id="password" required />
         </div>
         <button className="btn login-btn">
           {isLogin ? "login" : " Register"}
@@ -23,7 +23,7 @@ const AuthForm = () => {
       </Form>
       <p className="create-acc">
         {isLogin ? (
-          <Link to={"/auth?mode=regsiter"}>
+          <Link to={"/auth?mode=signup"}>
             Dont have an account ? <span>Create Account</span>
           </Link>
         ) : (

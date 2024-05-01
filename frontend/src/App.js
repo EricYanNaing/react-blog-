@@ -10,7 +10,7 @@ import Details, {
 } from "./pages/Details";
 import Error from "./components/Error";
 import Edit from "./pages/Edit";
-import Auth from "./pages/Auth";
+import Auth, { action as authAction } from "./pages/Auth";
 
 function App() {
   const router = createBrowserRouter([
@@ -32,6 +32,7 @@ function App() {
         {
           path: "/auth",
           element: <Auth />,
+          action: authAction,
         },
         {
           path: ":id",
