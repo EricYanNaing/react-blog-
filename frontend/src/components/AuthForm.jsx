@@ -1,9 +1,11 @@
 import React from "react";
-import { Form, Link, useSearchParams } from "react-router-dom";
+import { Form, Link, useNavigation, useSearchParams } from "react-router-dom";
 
 const AuthForm = () => {
   const [searchParams] = useSearchParams();
   const isLogin = searchParams.get("mode") === "login";
+  const navigate = useNavigation();
+  const isLoading = navigate.state === "submitting";
   console.log(isLogin);
   return (
     <section className="form-section">
@@ -18,7 +20,7 @@ const AuthForm = () => {
           <input type="password" name="password" id="password" required />
         </div>
         <button className="btn login-btn">
-          {isLogin ? "login" : " Register"}
+          {isLoading ? "Submitting" : isLogin ? "login" : " Register"}
         </button>
       </Form>
       <p className="create-acc">

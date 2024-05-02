@@ -1,6 +1,7 @@
 import React from "react";
 import { Form, redirect } from "react-router-dom";
 import uuid from "react-uuid";
+import { getToken } from "../utlis/auth";
 
 const PostForm = ({ header, btn, oldPostData, method }) => {
   console.log(method);
@@ -75,10 +76,13 @@ export const action = async ({ request, params }) => {
     url = `http://localhost:8080/posts/${id}`;
   }
 
+  const token = getToken();
+
   const response = await fetch(url, {
     method: method,
     headers: {
       "Content-Type": "application/json",
+      Authorization: "Bearer " + token,
     },
     body: JSON.stringify(postData),
   });

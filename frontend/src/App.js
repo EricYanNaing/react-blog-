@@ -11,6 +11,7 @@ import Details, {
 import Error from "./components/Error";
 import Edit from "./pages/Edit";
 import Auth, { action as authAction } from "./pages/Auth";
+import { logout as logoutAction } from "./pages/Logout";
 
 function App() {
   const router = createBrowserRouter([
@@ -50,6 +51,10 @@ function App() {
               action: udpateAction,
             },
           ],
+        },
+        {
+          path: "logout",
+          action: logoutAction,
         },
       ],
     },
